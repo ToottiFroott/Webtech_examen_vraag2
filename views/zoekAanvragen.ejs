@@ -10,20 +10,11 @@
 
 <body>
     <h1>Aanvraag inhaalexamen</h1>
-    <form action="/aanvraag" method="POST">
+    <form action="/zoekAanvragen" method="POST">
         Naam student:
         <input type="text" name="naam" />
         <br />
-        Examen:
-        <input type="text" name="examen" />
-        <br />
-        Reden:
-        <input type="text" name="reden" />
-        <br />
-        Datum van indienen:
-        <input type="text" readonly name="datum" value=<%=new Date().toLocaleDateString();%> />  
-        <br />
-        <input type="submit" value="Verzend"/>
+        <button type="submit">Verzend</button>
     </form>
 </body>
 
