@@ -17,12 +17,14 @@
             <td>Reden</td>
             <td>Datum van indienen</td>
         </tr>
+        <% for (var i = 0; i < inhaal.length; i++) {%>
         <tr>
-            <td><%=inhaal.naam%></td>
-            <td><%=inhaal.examen%></td>
-            <td><%=inhaal.reden%></td>
-            <td><%=inhaal.datum%></td>
+            <td><%= inhaal[i].naam %></td>
+            <td><%= inhaal[i].examen %></td>
+            <td><%= inhaal[i].reden %></td>
+            <td><%= inhaal[i].datum %></td>
         </tr>
+        <% } %>
     </table>
 </body>
 

@@ -34,12 +34,11 @@ app.post('/aanvraag', (req, res) => {
 })
 
 app.get('/zoekAanvragen', (req, res) => {
-    res.render('zoekAanvragen.ejs', { inhaal: ''});
+    res.render('zoekAanvragen.ejs', { inhaal: '' });
 });
 
 app.post('/zoekAanvragen', (req, res) => {
-    var query = { naam: req.body.naam };
-    db.collection('inhaal').find(query).toArray((err, result) => {
+    db.collection('inhaal').find({ naam: req.body.naam }).toArray((err, result) => {
         if (err) return console.log(err);
         if (result = '') {
             res.render('geen_aanvragen_gevonden.ejs');
